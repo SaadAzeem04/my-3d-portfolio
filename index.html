@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Saad Azeem | Game Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <link rel="stylesheet" href="/src/style.css">
+
+    <!-- EmailJS Setup -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () { emailjs.init({ publicKey: "SCElwBPAHKjlaXSh_" }); })();
+    </script>
+  </head>
+  <body>
+    <div id="progress"></div>
+    <!-- Corner logo (embedded in the page, no file needed) -->
+    <a id="site-logo" href="#home" aria-label="Syed Saad Azeem, back to top"><img src="data:image/png;base64,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" alt="Syed Saad Azeem signature"></a>
+    <canvas id="bg"></canvas>
+
+    <main id="ui-container">
+
+      <nav id="navbar">
+        <div class="logo">SAAD.</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#showreel">Showreel</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Switch to light theme" title="Switch theme"><svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      </nav>
+
+      <!-- HOME -->
+      <section id="home">
+        <h1>Syed Saad <span>Azeem</span></h1>
+        <div class="typing" id="typing" aria-label="Game Developer"></div>
+        <p>Fourth-year BSCS (Gaming &amp; Animation) student at NED University. I build my own games, from story and level design to core mechanics.</p>
+        <div class="cta-row">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn ghost" href="#contact">Contact me</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About me</h2>
+        <div class="glass reveal">
+          <p>I'm a fourth-year BSCS (Gaming &amp; Animation) student at NED University of Engineering &amp; Technology. My interest in game development and animation grew from creating my own semester games. I also provide tuition services and explore social media marketing, which lets me combine technical, creative and communication skills.</p>
+          <p style="margin-top:14px">I'm passionate about crafting engaging gameplay experiences and eager to contribute to professional game development projects.</p>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><b data-count="7">0</b><small>Game projects</small></div>
+          <div class="stat"><b data-count="3.48" data-dec="2">0</b><small>CGPA (to sem 6)</small></div>
+          <div class="stat"><b data-count="2">0</b><small>Game engines</small></div>
+          <div class="stat"><b data-count="6" data-suffix="-7">0</b><small>Levels shipped in internship</small></div>
+        </div>
+      </section>
+
+      <!-- SHOWREEL -->
+      <section id="showreel">
+        <h2>Showreel</h2>
+        <p>A short portfolio reel made in Adobe After Effects.</p>
+        <div class="player reveal">
+          <!-- Put your video at public/videos/showreel.mp4 (optional poster: public/videos/showreel-poster.jpg) -->
+          <video controls preload="metadata" playsinline poster="/videos/showreel-poster.jpg" src="/videos/showreel.mp4"></video>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-groups reveal">
+          <div class="skill-card big">
+            <h3>Game engines</h3>
+            <div class="tags"><span>Unity</span><span>Unreal Engine</span></div>
+          </div>
+          <div class="skill-card big">
+            <h3>Languages</h3>
+            <div class="tags"><span>C#</span><span>C++</span></div>
+          </div>
+          <div class="skill-card">
+            <h3>Tools &amp; other</h3>
+            <div class="tags"><span>Canva</span><span>Email marketing</span><span>Adobe After Effects</span></div>
+          </div>
+          <div class="skill-card">
+            <h3>Concepts</h3>
+            <div class="tags">
+              <span>Game mechanics</span><span>Physics systems</span><span>Animation</span><span>Level design</span>
+              <span>Pre-production</span><span>Story developing</span><span>OOP</span><span>VR &amp; AR</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="cta-row" style="margin:-8px 0 28px">
+          <a class="btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch all project demos</a>
+        </div>
+        <div class="project-grid reveal">
+          <article class="project">
+            <div class="meta">Unity / C# · Semester 5</div>
+            <h3>The Signal Shutdown</h3>
+            <p>A 3D story-based game. Survive a police headquarters full of corrupted officers and shut down the siren.</p>
+            <div class="role">Story and concept</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Unity / C# · Semester 5</div>
+            <h3>Coin Cascade</h3>
+            <p>A fast-paced 2D platformer with fluid walking and jumping, and a high-score system built on coin collection and hazard avoidance.</p>
+            <div class="role">Solo project</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Unity / C# · Semester 5</div>
+            <h3>Furious Seven</h3>
+            <p>A 3D game blending open-world and racing. Players complete assigned tasks in each level.</p>
+            <div class="role">Main menu UI and one level</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Unreal Engine · Semester 6</div>
+            <h3>The Living Jungle</h3>
+            <p>A 3D game where you are trapped in a magical jungle: fight enemies, collect items and escape the dungeon.</p>
+            <div class="role">Core mechanics</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Pre-production · Semester 6</div>
+            <h3>The Kitchen Carnage</h3>
+            <p>A 3D animated action-adventure. Chef Blaze fights corrupted food creatures in a living kitchen and restores balance to the Spice Core to stop Lord Moldrak.</p>
+            <div class="role">Team lead</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Unity VR · Semester 6</div>
+            <h3>Solar System</h3>
+            <p>A VR simulator for exploring the solar system, space and spacecraft, with informative details about each planet.</p>
+            <div class="role">VR environment design</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Unreal Engine · Semester 7</div>
+            <h3>WADA</h3>
+            <p>An open-world survival RPG. Save your child in the castle using a bow and arrow, a sword and assassination skills.</p>
+            <div class="role">Level and story design</div>
+            <a class="demo-btn" href="https://canva.link/m6juiw7kf04i1f6" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+          <article class="project">
+            <div class="meta">Adobe After Effects · CEGA Post Production final project</div>
+            <h3>Documentary Style Video</h3>
+            <p>A 20-second documentary-style motion graphics piece on the Kennedy and Khrushchev era (1961 to 1963): an archival memo, photo cards hanging on a red string and an animated timeline, with 3D camera moves, transitions and sound. Edited by hand with a lot of time and effort.</p>
+            <div class="role">Solo project</div>
+            <a class="demo-btn" href="https://www.canva.com/design/DAHJSlo5gJ4/TlbNcD4apaGkYsMAmcGulQ/view" target="_blank" rel="noopener">Watch demo</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- JOURNEY: experience, education, certifications -->
+      <section id="journey">
+        <h2>Journey</h2>
+        <div class="timeline reveal">
+          <div class="t-item">
+            <h3>Game Development Intern, Game Storm Studios</h3>
+            <div class="when">Summer 2026 · 2 months</div>
+            <p>Built a complete 2D game from scratch using a reference game, designing and implementing 6 to 7 levels. Handled core mechanics, asset integration and level progression.</p>
+          </div>
+          <div class="t-item">
+            <h3>BS Computer Science (Gaming &amp; Animation), NED University</h3>
+            <div class="when">2023 to present · CGPA 3.48 / 4.00 (to semester 6)</div>
+            <p>Transferred from Electronics Engineering (CGPA 3.73).</p>
+          </div>
+          <div class="t-item">
+            <h3>Intermediate, Pre-Engineering, Govt. Delhi College</h3>
+            <div class="when">2023 · 81.8% and 80.0%</div>
+          </div>
+          <div class="t-item">
+            <h3>Matriculation, Education Trust Nasra School</h3>
+            <div class="when">2021 · 92.3%</div>
+          </div>
+        </div>
+
+        <div class="sub-title">Certifications · CEGA (Center for Excellence in Gaming &amp; Animation)</div>
+        <div class="project-grid reveal">
+          <article class="project"><h3>Unreal Engine Game Development</h3><p>Blueprint scripting, C++ integration and high-fidelity 3D environment design.</p></article>
+          <article class="project"><h3>Game Pre-Production &amp; Design</h3><p>GDD creation, storyboarding and project pipelines.</p></article>
+          <article class="project"><h3>Post Production</h3><p>Video editing and Adobe After Effects: motion graphics, visual effects, compositing. Final project: a documentary-style video.</p></article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact me</h2>
+        <p>Have a game project or an internship in mind? Send a message.</p>
+        <div class="contact-links">
+          <a href="mailto:saadazeem9689@gmail.com">saadazeem9689@gmail.com</a>
+          <a href="tel:03172709689">0317-2709689</a>
+          <a href="https://www.linkedin.com/in/syed-saad-azeem-912416363/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/saadazeem710" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <form id="contact-form">
+          <input type="text" id="name" name="from_name" placeholder="Your name" required />
+          <input type="email" id="email" name="reply_to" placeholder="Your email" required />
+          <input type="text" id="subject" name="subject" placeholder="Subject" required />
+          <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+          <button type="submit">Send message</button>
+        </form>
+        <div id="form-status"></div>
+      </section>
+
+    </main>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container">
+      <div id="chat-window" class="hidden">
+        <div id="chat-header">
+          <h3>AI Assistant</h3>
+          <button id="close-chat" aria-label="Close chat">✖</button>
+        </div>
+        <div id="chat-messages">
+          <div class="message bot-msg">Hello! I am Saad's AI Assistant. Ask me anything about his skills or projects!</div>
+        </div>
+        <div id="chat-chips" aria-label="Suggested questions"></div>
+        <div id="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Type your question here..." />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+      <button id="chat-toggle-btn">💬 Chat with AI</button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
